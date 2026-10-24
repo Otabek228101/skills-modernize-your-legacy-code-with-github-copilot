@@ -12,6 +12,18 @@ The application is split into three COBOL programs:
 
 Together, they simulate a minimal account ledger with a persistent in-memory balance.
 
+## Node.js application
+
+The modernized application is in `src/accounting`. Run it with Node.js 18 or later:
+
+```sh
+cd src/accounting
+npm install
+npm start
+```
+
+The application retains the COBOL menu and business rules. It stores balances in memory for the current process only, starts at `1000.00`, accepts credits and debits in cents, and rejects debits that exceed available funds. Run its tests with `npm test`.
+
 ---
 
 ## File-by-file breakdown
